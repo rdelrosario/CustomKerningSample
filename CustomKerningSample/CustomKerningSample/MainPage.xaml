@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CustomKerningSample"
+             xmlns:controls="clr-namespace:CustomKerningSample.Controls"
+             x:Class="CustomKerningSample.MainPage">
+    <StackLayout>
+        <controls:CustomLabel Text="Hello" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center"  Kerning="50"/>
+
+        <controls:CustomLabel Text="World" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center"   Kerning="25"/>
+        <controls:CustomLabel Text="Welcome to Xamarin.Forms!" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center"  Kerning="10"/>
+    </StackLayout>
+   
+
+</ContentPage>
