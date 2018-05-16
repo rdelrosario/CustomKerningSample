@@ -4,17 +4,28 @@
              xmlns:local="clr-namespace:CustomKerningSample"
              xmlns:controls="clr-namespace:CustomKerningSample.Controls"
              x:Class="CustomKerningSample.MainPage">
-    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-        <controls:CustomLabel Text="Hello" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center"  Kerning="50"/>
+    <StackLayout VerticalOptions="CenterAndExpand" 
+                 HorizontalOptions="FillAndExpand"
+                 Padding="20">
 
-        <controls:CustomLabel Text="World" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center"   Kerning="25"/>
-        <controls:CustomLabel Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center"  Kerning="10"/>
+         <Picker x:Name="picker" 
+                 Title="Select Kerning"
+                 SelectedIndexChanged="Handle_SelectedIndexChanged">
+              <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:Double}">
+                    <x:Double>0</x:Double>
+                    <x:Double>10</x:Double>
+                    <x:Double>20</x:Double>
+                    <x:Double>40</x:Double>
+                    <x:Double>55</x:Double>
+                </x:Array>
+              </Picker.ItemsSource>
+        </Picker>
+        
+        <controls:CustomLabel Text="Hello" 
+                              HorizontalTextAlignment="Center"
+                              HorizontalOptions="FillAndExpand"
+                              x:Name="element"/>
     </StackLayout>
    
 

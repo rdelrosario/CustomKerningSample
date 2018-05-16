@@ -43,10 +43,12 @@ namespace CustomKerningSample.Droid.Renderers
             var cLabel = Element as CustomLabel;
             if (CustomLabel.KerningProperty.PropertyName == e.PropertyName)
             {
+				Control.Text = cLabel.Text;
                 ApplyKerning(cLabel.Kerning);
             }
             else if (CustomLabel.TextProperty.PropertyName == e.PropertyName)
             {
+				Control.Text = cLabel.Text;
                 ApplyKerning(cLabel.Kerning);
             }
         }
@@ -70,7 +72,7 @@ namespace CustomKerningSample.Droid.Renderers
             {
                 for (int i = 1; i < builder.ToString().Length; i += 2)
                 {
-                    finalText.SetSpan(new ScaleXSpan((mKerningFactor) / 10), i, i + 1, SpanTypes.ExclusiveExclusive);
+                    finalText.SetSpan(new ScaleXSpan((mKerningFactor) / 6), i, i + 1, SpanTypes.ExclusiveExclusive);
                 }
             }
             Control.SetText(finalText, BufferType.Spannable);

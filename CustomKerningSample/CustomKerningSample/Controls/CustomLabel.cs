@@ -7,7 +7,6 @@ namespace CustomKerningSample.Controls
 {
     public class CustomLabel : Label
     {
-
         public static readonly BindableProperty KerningProperty = BindableProperty.Create(
            propertyName: nameof(Kerning),
            returnType: typeof(float),

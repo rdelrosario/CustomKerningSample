@@ -9,9 +9,14 @@ namespace CustomKerningSample
 {
 	public partial class MainPage : ContentPage
 	{
-		public MainPage()
+        public MainPage()
 		{
 			InitializeComponent();
 		}
+
+        public void Handle_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            element.Kerning = Convert.ToInt32(picker.SelectedItem);
+        }
 	}
 }

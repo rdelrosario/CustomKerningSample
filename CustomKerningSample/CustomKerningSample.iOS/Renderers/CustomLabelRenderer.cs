@@ -37,7 +37,7 @@ namespace CustomKerningSample.iOS.Renderers
                 Control.AttributedText = new NSAttributedString(Element.Text, new UIStringAttributes
                 {
 
-                    Font = UIFont.SystemFontSize(Element.FontSize),
+                    Font = UIFont.SystemFontOfSize((nfloat)Element.FontSize),
                     KerningAdjustment = cLabel.Kerning
                 });
             }
